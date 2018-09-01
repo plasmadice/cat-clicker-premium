@@ -1,6 +1,5 @@
 # Cat Clicker
-This is the sequel to a previous project. This sequel's purpose was to show the importance of properly structuring code and how using a MVC relationship can make scaling easier. View the original project [here](https://github.com/plasmadice/cat-clicker)
-Created for a udacity course. This project purpose is to teach the creator that the requirements of a project are not really finite. And to work on a project with that in mind.
+This is the sequel to a previous project. This sequel's purpose was to show the importance of properly structuring code and how using a MVC relationship can make scaling easier. View the original project [here.](https://github.com/plasmadice/cat-clicker)
 
 ## How it works
 Simply open index.html or view the [live version](http://plasmadice.github.io/cat-clicker-premium/)
