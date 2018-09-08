@@ -6,7 +6,6 @@
     <title>Cat Clicker Premium</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="css/styles.css"/>
-    <script src="main.js"></script>
 </head>
 <body>
     <div>
@@ -17,6 +16,13 @@
             <h1 class='cat-name'></h1>
             <h2 class='cat-clicks'></h2>
             <img class='cat-picture' src='' alt='Cat with a smile drawn on'>
+            <button class='admin'>Admin</button>
+            <form style='display: none'>
+                <input class='admin-name' type='text' label='name' placeholder='Name'>
+                <input class='admin-url' type='text' label='URL' placeholder='ImgURL'>
+                <input class='admin-clicks' type='text' label='clicks' placeholder='# of Clicks'>
+                <button class='save'>Save</button>
+            </form>
         </div>
     </div>
 

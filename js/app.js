@@ -39,6 +39,35 @@ const control = {
         })
 
         model.currentCat = model.cats[0];
+
+        // add event listeners to admin panel
+        const admin = document.querySelector('.admin');
+        admin.addEventListener('click', (event) => {
+            event.preventDefault();
+            view.toggleAdmin();
+        })
+
+        const save = document.querySelector('.save');
+        save.addEventListener('click', (event) => {
+            event.preventDefault();
+
+            const name = document.querySelector('.admin-name');
+            const url = document.querySelector('.admin-url');
+            const clicks = document.querySelector('.admin-clicks');
+            const oldName = document.querySelector('.cat-name');
+
+            if (!!name.value) {
+                model.currentCat.name = name.value;
+            }
+            if (!!url.value) {
+                model.currentCat.url = url.value;
+            }
+            if (!!clicks.value) {
+                model.currentCat.clicks = clicks.value;
+            }
+            
+            view.adminUpdate(oldName);
+        })
     }
 }
 
@@ -69,6 +98,25 @@ const view = {
         const clicks = document.querySelector('.cat-clicks');
 
         clicks.innerText = `Clicks: ${model.currentCat.clicks}`
+    },
+
+    toggleAdmin: function() {
+        const form = document.querySelector('.cat form').style;
+        if (form.display === 'none') {
+            form.display = 'flex'
+        } else {
+            form.display = 'none'
+        }
+    },
+
+    adminUpdate: function(oldName) {
+        const name = document.querySelector('.cat-name');
+        const clicks = document.querySelector('.cat-clicks');
+        const img = document.querySelector('.cat-picture');
+
+        name.innerText = model.currentCat.name;
+        clicks.innerText = `Clicks: ${model.currentCat.clicks}`;
+        img.src = model.currentCat.url
     }
 }
 
